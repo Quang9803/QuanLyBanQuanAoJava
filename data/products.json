@@ -1,0 +1,299 @@
+[
+  {
+    "id": "P003",
+    "name": "Áo sơ mi nam",
+    "price": 149000.0,
+    "quantity": 8,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P004",
+    "name": "Quần jeans nam",
+    "price": 249000.0,
+    "quantity": 6,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P005",
+    "name": "Áo thun trẻ em",
+    "price": 79000.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P006",
+    "name": "Đầm công chúa bé gái",
+    "price": 139000.0,
+    "quantity": 4,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P007",
+    "name": "a",
+    "price": 12333.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P008",
+    "name": "sf",
+    "price": 12222.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P0009",
+    "name": "svádva",
+    "price": 234423.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P010",
+    "name": "fdfádf",
+    "price": 1222.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P011",
+    "name": "qưe",
+    "price": 1234.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P012",
+    "name": "váy hoa",
+    "price": 1450.0,
+    "quantity": 10,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P013",
+    "name": "áo kiểu",
+    "price": 1320.0,
+    "quantity": 8,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P014",
+    "name": "chân váy",
+    "price": 980.0,
+    "quantity": 14,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P015",
+    "name": "đầm dạ tiệc",
+    "price": 1750.0,
+    "quantity": 5,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P016",
+    "name": "áo sơ mi nữ",
+    "price": 1100.0,
+    "quantity": 20,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P017",
+    "name": "quần tây nữ",
+    "price": 1220.0,
+    "quantity": 9,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P018",
+    "name": "áo khoác nữ",
+    "price": 2000.0,
+    "quantity": 6,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P019",
+    "name": "áo thun nam",
+    "price": 900.0,
+    "quantity": 15,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P020",
+    "name": "quần jean nam",
+    "price": 1500.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P021",
+    "name": "áo sơ mi nam",
+    "price": 1350.0,
+    "quantity": 11,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P022",
+    "name": "áo khoác nam",
+    "price": 2100.0,
+    "quantity": 7,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P023",
+    "name": "quần short nam",
+    "price": 980.0,
+    "quantity": 10,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P024",
+    "name": "áo vest nam",
+    "price": 2500.0,
+    "quantity": 4,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P025",
+    "name": "quần tây nam",
+    "price": 1400.0,
+    "quantity": 8,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P026",
+    "name": "áo hoodie nam",
+    "price": 1700.0,
+    "quantity": 13,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "NAM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P027",
+    "name": "áo thun trẻ em",
+    "price": 500.0,
+    "quantity": 18,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P028",
+    "name": "quần short trẻ em",
+    "price": 600.0,
+    "quantity": 14,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P029",
+    "name": "đầm bé gái",
+    "price": 750.0,
+    "quantity": 10,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P030",
+    "name": "áo khoác trẻ em",
+    "price": 1000.0,
+    "quantity": 6,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P031",
+    "name": "áo nỉ trẻ em",
+    "price": 850.0,
+    "quantity": 9,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P032",
+    "name": "bộ đồ ngủ trẻ em",
+    "price": 780.0,
+    "quantity": 8,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P033",
+    "name": "quần legging trẻ em",
+    "price": 700.0,
+    "quantity": 11,
+    "imagePath": "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P034",
+    "name": "áo gió trẻ em",
+    "price": 950.0,
+    "quantity": 7,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpeg",
+    "category": "TRẺ EM",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  },
+  {
+    "id": "P035",
+    "name": "afa",
+    "price": 123456.0,
+    "quantity": 12,
+    "imagePath": "/Users/phanvinhquang/Downloads/quần.jpg",
+    "category": "NỮ",
+    "description": "Áo thun cotton thoáng mát, co giãn tốt"
+  }
+]
