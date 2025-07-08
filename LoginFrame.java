@@ -57,22 +57,23 @@ public class LoginFrame extends JFrame {
         add(panel);
     }
 
-    private void doLogin() {
-        String username = txtUsername.getText().trim();
-        String password = new String(txtPassword.getPassword()).trim();
+// Trong phương thức doLogin()
+private void doLogin() {
+    String username = txtUsername.getText().trim();
+    String password = new String(txtPassword.getPassword()).trim();
 
-        User user = UserDAO.login(username, password);
-        if (user != null) {
-            JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
-            dispose();
+    User user = UserDAO.login(username, password);
+    if (user != null) {
+        JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
+        dispose();
 
-            if ("admin".equalsIgnoreCase(user.getRole())) {
-                new MainFrame(user);
-            } else {
-                new UserHomeFrame();
-            }
+        if ("admin".equalsIgnoreCase(user.getRole())) {
+            new MainFrame(user); // Truyền user cho trang admin
         } else {
-            JOptionPane.showMessageDialog(this, "Sai tên đăng nhập hoặc mật khẩu.");
+            new UserHomeFrame(user); // Truyền user cho trang người dùng
         }
+    } else {
+        JOptionPane.showMessageDialog(this, "Sai tên đăng nhập hoặc mật khẩu!");
     }
+}
 }

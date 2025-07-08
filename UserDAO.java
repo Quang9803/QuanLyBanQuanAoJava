@@ -49,11 +49,11 @@ public class UserDAO {
 
     public static void update(User updatedUser) {
         for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getUsername().equals(updatedUser.getUsername())) {
-                users.set(i, updatedUser);
-                break;
+             if (users.get(i).getUsername().equals(updatedUser.getUsername())) {
+                 users.set(i, updatedUser);
+                 break;
             }
-        }
-        FileUtils.writeListToFile(FILE_PATH, users);
+         }
+         FileUtils.writeListToFile(FILE_PATH, users);
     }
 }
