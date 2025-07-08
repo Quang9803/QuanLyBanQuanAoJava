@@ -4,6 +4,7 @@ import main.dao.UserDAO;
 import main.model.User;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class LoginFrame extends JFrame {
     private JTextField txtUsername;
@@ -11,7 +12,7 @@ public class LoginFrame extends JFrame {
 
     public LoginFrame() {
         setTitle("Đăng nhập");
-        setSize(300, 180);
+        setSize(300, 220); // Tăng chiều cao để thêm nút đăng ký
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initUI();
@@ -42,29 +43,37 @@ public class LoginFrame extends JFrame {
         btnLogin.setBounds(90, 90, 120, 30);
         panel.add(btnLogin);
 
+        // Thêm nút đăng ký
+        JButton btnRegister = new JButton("Đăng ký");
+        btnRegister.setBounds(90, 130, 120, 30);
+        btnRegister.addActionListener(e -> {
+            dispose();
+            new RegisterFrame();
+        });
+        panel.add(btnRegister);
+
         btnLogin.addActionListener(e -> doLogin());
 
         add(panel);
     }
 
-    private void doLogin() {
-        String username = txtUsername.getText().trim();
-        String password = new String(txtPassword.getPassword()).trim();
+// Trong phương thức doLogin()
+private void doLogin() {
+    String username = txtUsername.getText().trim();
+    String password = new String(txtPassword.getPassword()).trim();
 
-        User user = UserDAO.login(username, password);
-        if (user != null) {
-            JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
-            dispose(); // đóng form login
+    User user = UserDAO.login(username, password);
+    if (user != null) {
+        JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
+        dispose();
 
-            // Mở giao diện theo vai trò
-            if ("admin".equalsIgnoreCase(user.getRole())) {
-                new MainFrame(user);
-            } else {
-                new UserHomeFrame(); // giao diện người dùng thường
-            }
-
+        if ("admin".equalsIgnoreCase(user.getRole())) {
+            new MainFrame(user); // Truyền user cho trang admin
         } else {
-            JOptionPane.showMessageDialog(this, "Sai tên đăng nhập hoặc mật khẩu.");
+            new UserHomeFrame(user); // Truyền user cho trang người dùng
         }
+    } else {
+        JOptionPane.showMessageDialog(this, "Sai tên đăng nhập hoặc mật khẩu!");
     }
+}
 }

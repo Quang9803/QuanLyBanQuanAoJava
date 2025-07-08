@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/MainFrame.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/model/Cart.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/data/products.json</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/LoginFrame.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/ProductDetailFrame.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/model/CartItem.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/UserHomeFrame.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/dao/ProductDAO.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/dao/UserDAO.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/model/User.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/ProductForm.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/CartPanel.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/view/ProductDetailPanel.java</file>
-            <file>file:/Users/phanvinhquang/Desktop/BTcuaQuang/ltjava/ClothesStore/src/main/model/Product.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

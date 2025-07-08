@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame(User user) {
         this.currentUser = user;
-        setTitle("Sản phẩm - Người dùng: " + user.getUsername());
+        setTitle("Trang quản trị - " + user.getUsername());
         setSize(800, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -7,6 +7,15 @@
   {
     "username": "quang",
     "password": "123456",
+    "email": "quang@gmail.com",
+    "phone": "0123456789",
+    "role": "user"
+  },
+  {
+    "username": "quang1",
+    "password": "123456",
+    "email": "quang@gmail.com",
+    "phone": "0123456789",
     "role": "user"
   }
 ]

@@ -1,26 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main.view;
 
 import main.dao.ProductDAO;
 import main.model.Product;
+import main.model.Cart;
+import main.model.FavoriteList;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import main.model.Cart;
 
 public class SearchPanel extends JPanel {
     private JTextField searchField;
     private JPanel resultsPanel;
     private Runnable onBack;
+    private FavoriteList favoriteList;
 
-    public SearchPanel(Runnable onBack) {
+    public SearchPanel(Runnable onBack, FavoriteList favoriteList) {
         this.onBack = onBack;
+        this.favoriteList = favoriteList;
         setLayout(new BorderLayout());
         setBackground(Color.WHITE);
 
@@ -64,84 +63,84 @@ public class SearchPanel extends JPanel {
     }
 
     void performSearch() {
-    String query = searchField.getText().trim();
-    if (query.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập từ khóa tìm kiếm", "Thông báo", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
+        String query = searchField.getText().trim();
+        if (query.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập từ khóa tìm kiếm", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 
-    // Hiển thị trạng thái loading
-    resultsPanel.removeAll();
-    resultsPanel.add(new JLabel("Đang tìm kiếm...", SwingConstants.CENTER));
-    resultsPanel.revalidate();
-    resultsPanel.repaint();
+        // Hiển thị trạng thái loading
+        resultsPanel.removeAll();
+        resultsPanel.add(new JLabel("Đang tìm kiếm...", SwingConstants.CENTER));
+        resultsPanel.revalidate();
+        resultsPanel.repaint();
 
-    new SwingWorker<List<Product>, Void>() {
-        @Override
-        protected List<Product> doInBackground() throws Exception {
-            try {
-                List<Product> allProducts = ProductDAO.getAll();
-                if (allProducts == null) {
+        new SwingWorker<List<Product>, Void>() {
+            @Override
+            protected List<Product> doInBackground() throws Exception {
+                try {
+                    List<Product> allProducts = ProductDAO.getAll();
+                    if (allProducts == null) {
+                        return Collections.emptyList();
+                    }
+
+                    return allProducts.stream()
+                            .filter(p -> p != null && p.getName() != null)
+                            .filter(p -> p.getName().toLowerCase().contains(query.toLowerCase()))
+                            .collect(Collectors.toList());
+                } catch (Exception e) {
+                    e.printStackTrace();
                     return Collections.emptyList();
                 }
-                
-                return allProducts.stream()
-                        .filter(p -> p != null && p.getName() != null)
-                        .filter(p -> p.getName().toLowerCase().contains(query.toLowerCase()))
-                        .collect(Collectors.toList());
-            } catch (Exception e) {
-                e.printStackTrace();
-                return Collections.emptyList();
             }
-        }
 
-        @Override
-        protected void done() {
-            try {
-                List<Product> results = get();
-                displaySearchResults(results);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                displayErrorMessage();
+            @Override
+            protected void done() {
+                try {
+                    List<Product> results = get();
+                    displaySearchResults(results);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    displayErrorMessage();
+                }
             }
-        }
-    }.execute();
-}
-
-private void displaySearchResults(List<Product> results) {
-    resultsPanel.removeAll();
-    
-    if (results == null || results.isEmpty()) {
-        resultsPanel.add(new JLabel("Không tìm thấy sản phẩm nào phù hợp", SwingConstants.CENTER));
-    } else {
-        JPanel gridPanel = new JPanel(new GridLayout(0, 4, 10, 10));
-        gridPanel.setBackground(Color.WHITE);
-        gridPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        for (Product p : results) {
-            if (p != null) {
-                gridPanel.add(createProductCard(p));
-            }
-        }
-
-        // Thêm padding nếu cần
-        while (gridPanel.getComponentCount() % 4 != 0) {
-            gridPanel.add(Box.createHorizontalStrut(150));
-        }
-
-        resultsPanel.add(new JScrollPane(gridPanel));
+        }.execute();
     }
 
-    resultsPanel.revalidate();
-    resultsPanel.repaint();
-}
+    private void displaySearchResults(List<Product> results) {
+        resultsPanel.removeAll();
 
-private void displayErrorMessage() {
-    resultsPanel.removeAll();
-    resultsPanel.add(new JLabel("Đã xảy ra lỗi khi tìm kiếm. Vui lòng thử lại!", SwingConstants.CENTER));
-    resultsPanel.revalidate();
-    resultsPanel.repaint();
-}
+        if (results == null || results.isEmpty()) {
+            resultsPanel.add(new JLabel("Không tìm thấy sản phẩm nào phù hợp", SwingConstants.CENTER));
+        } else {
+            JPanel gridPanel = new JPanel(new GridLayout(0, 4, 10, 10));
+            gridPanel.setBackground(Color.WHITE);
+            gridPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+            for (Product p : results) {
+                if (p != null) {
+                    gridPanel.add(createProductCard(p));
+                }
+            }
+
+            // Thêm padding nếu cần
+            while (gridPanel.getComponentCount() % 4 != 0) {
+                gridPanel.add(Box.createHorizontalStrut(150));
+            }
+
+            resultsPanel.add(new JScrollPane(gridPanel));
+        }
+
+        resultsPanel.revalidate();
+        resultsPanel.repaint();
+    }
+
+    private void displayErrorMessage() {
+        resultsPanel.removeAll();
+        resultsPanel.add(new JLabel("Đã xảy ra lỗi khi tìm kiếm. Vui lòng thử lại!", SwingConstants.CENTER));
+        resultsPanel.revalidate();
+        resultsPanel.repaint();
+    }
 
     private JPanel createProductCard(Product p) {
         JPanel card = new JPanel();
@@ -183,9 +182,9 @@ private void displayErrorMessage() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 resultsPanel.removeAll();
-                resultsPanel.add(new ProductDetailPanel(p, () -> {
+                resultsPanel.add(new ProductDetailPanel(p, favoriteList, () -> {
                     resultsPanel.removeAll();
-                    resultsPanel.add(new SearchPanel(onBack));
+                    resultsPanel.add(new SearchPanel(onBack, favoriteList));
                     resultsPanel.revalidate();
                     resultsPanel.repaint();
                 }));

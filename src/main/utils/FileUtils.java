@@ -18,11 +18,14 @@ public class FileUtils {
         }
     }
 
-    public static <T> void writeListToFile(String filePath, List<T> list) {
-        try (Writer writer = new FileWriter(filePath)) {
-            gson.toJson(list, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static <T> boolean writeListToFile(String filePath, List<T> list) {
+    try (Writer writer = new FileWriter(filePath)) {
+        gson.toJson(list, writer);
+        return true;
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false;
     }
+}
+
 }

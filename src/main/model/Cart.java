@@ -55,5 +55,12 @@ public class Cart {
                 item.getProduct().getName().equalsIgnoreCase(name) &&
                 item.getSize().equalsIgnoreCase(size));
     }
+    public double calculateTotal() {
+    double total = 0;
+    for (CartItem item : items) {
+        total += item.getProduct().getPrice() * item.getQuantity();
+    }
+    return total;
+}
 
 }

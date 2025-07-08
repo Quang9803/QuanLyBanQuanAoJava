@@ -1,0 +1,19 @@
+[ {
+  "id" : "ec24ba04-12c9-4be6-b844-0b135407a433",
+  "username" : "quang",
+  "items" : [ {
+    "product" : {
+      "id" : "P019",
+      "name" : "áo thun nam",
+      "price" : 900.0,
+      "quantity" : 15,
+      "imagePath" : "/Users/phanvinhquang/Downloads/quânshort.jpeg",
+      "category" : "NAM",
+      "description" : "Áo thun cotton thoáng mát, co giãn tốt"
+    },
+    "quantity" : 1,
+    "size" : "M",
+    "totalPrice" : 900.0
+  } ],
+  "total" : 900.0,
+  "date"
